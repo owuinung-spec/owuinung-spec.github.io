@@ -2,7 +2,7 @@
 window.OWI = {
   email: "owuinung@gmail.com",                 // public contact + grievance address
   repo: "owuinung-spec/owuinung-spec.github.io", // GitHub repo that holds the APK releases
-  apkName: "Owi-Compass.apk"                   // file name attached to every release
+  apkName: ""                                  // not used: any file name works, e.g. Owi-Compass-1.1.0.apk
 };
 
 (function () {
@@ -21,7 +21,7 @@ window.OWI = {
 
   // Latest release: used by the home page button and the download page
   var latestUrl = "https://github.com/" + C.repo + "/releases/latest";
-  var directUrl = latestUrl + "/download/" + C.apkName;
+  var directUrl = latestUrl; // fallback; replaced below by the real file link of the latest release
   document.querySelectorAll("[data-apk-link]").forEach(function (a) { a.href = directUrl; });
 
   var needInfo = document.querySelector("[data-release]") || document.querySelector("[data-version]");
