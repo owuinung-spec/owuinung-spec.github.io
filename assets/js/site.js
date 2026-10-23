@@ -55,4 +55,20 @@ window.OWI = {
       set("[data-version]", "Latest version");
       set("[data-status]", "We could not read the version details just now. The button above still downloads the latest file.");
     });
+
+  // Demo video language switch
+  var dv = document.getElementById("demoVideo");
+  if (dv) {
+    var files = { en: "assets/video/owi-compass-demo-en.mp4", hi: "assets/video/owi-compass-demo-hi.mp4" };
+    document.querySelectorAll(".demo-lang button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var lang = b.getAttribute("data-lang");
+        var wasPlaying = !dv.paused && !dv.ended;
+        document.querySelectorAll(".demo-lang button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        dv.src = files[lang];
+        dv.load();
+        if (wasPlaying) { var p = dv.play(); if (p && p.catch) p.catch(function () {}); }
+      });
+    });
+  }
 })();
