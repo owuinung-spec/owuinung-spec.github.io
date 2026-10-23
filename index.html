@@ -28,6 +28,7 @@
   <div class="wrap head-row">
     <a class="brand" href="index.html" aria-label="Owi Compass home"><img src="assets/img/owi-mark.webp" alt="" width="40" height="36"><span>Owi Compass</span></a>
     <nav class="nav" aria-label="Main">
+      <a href="index.html#demo">Demo</a>
       <a href="index.html#inside" aria-current="page">What's inside</a>
       <a href="index.html#plans">Plans</a>
       <a href="support.html">Support</a>
@@ -63,6 +64,24 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="demo" id="demo">
+  <div class="wrap">
+    <h2 class="title">See it in action</h2>
+    <p class="intro">A short tour of billing, stock, reports and the forecast. Choose the language you prefer.</p>
+    <div class="demo-lang" role="group" aria-label="Video language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="hi" aria-pressed="false" lang="hi">हिन्दी</button>
+    </div>
+    <div class="demo-frame">
+      <video id="demoVideo" controls preload="none" playsinline poster="assets/img/demo-poster.jpg" aria-label="Owi Compass demo video">
+        <source src="assets/video/owi-compass-demo-en.mp4" type="video/mp4">
+        Your browser cannot play this video. <a href="assets/video/owi-compass-demo-en.mp4">Download it instead</a>.
+      </video>
+    </div>
+    <p class="fine demo-note">The screens in the video are recreated from the app and use sample shop data. Your own numbers will differ.</p>
   </div>
 </section>
 
