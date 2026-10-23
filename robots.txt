@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /owuinung_pos-admin/
+Sitemap: https://owuinung-spec.github.io/sitemap.xml
